@@ -1,1 +1,0 @@
-# cloudopshub-cloud-platform
