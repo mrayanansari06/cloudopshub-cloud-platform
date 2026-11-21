@@ -49,7 +49,7 @@ export const handler = async (event) => {
   }));
 
   await snsClient.send(new PublishCommand({
-    TopicArn: "arn:aws:sns:eu-north-1:786896018350:CloudOpsHubNotifications",
+    TopicArn: process.env.TOPIC_ARN,
     Subject: `Request ${newStatus}`,
     Message: `Request ${requestId} (${current.Item.title.S}) has been ${newStatus}.`
   }));
